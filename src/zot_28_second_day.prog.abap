@@ -1,10 +1,13 @@
 *&---------------------------------------------------------------------*
-*& Report zot_28_hello_world
+*& Report zot_28_second_day
 *&---------------------------------------------------------------------*
 *&
 *&---------------------------------------------------------------------*
-REPORT zot_28_hello_world.
+REPORT zot_28_second_day.
 
 cl_demo_output=>write( 'Hello World' ).
+cl_demo_output=>write( 'Anıl Agcalar' ).
+
+
 
 cl_demo_output=>display( ).

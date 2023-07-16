@@ -19,22 +19,22 @@ SELECTION-SCREEN BEGIN OF BLOCK b2 WITH FRAME TITLE TEXT-002.
 SELECTION-SCREEN END OF BLOCK b2.
 
 DATA lt_tweet_modify TYPE TABLE OF zot_28_t_twtr.
-* Bu buraya mıydı emin değilim sonra bak.
+START-OF-SELECTION.
 
-IF p_id = 0 AND p_twitat EQ 'X' OR p_id = 0 AND p_twitdg EQ 'X' OR p_id = 0 AND p_tsil EQ 'X'.
-      cl_demo_output=>display( 'ID != O' ).
+
+IF p_id = space AND p_twitat EQ 'X' OR p_id = space AND p_twitdg EQ 'X' OR p_id = space AND p_tsil EQ 'X'.
+      cl_demo_output=>display( 'id boş olmamalı' ).
       ELSE.
       CASE 'X'.
       WHEN p_twitat.
       TRY.
             APPEND VALUE #(
             twid = p_id
-            tweet = p_id ) TO lt_tweet_modify.
+            tweet = p_twit ) TO lt_tweet_modify.
             INSERT zot_28_t_twtr FROM TABLE lt_tweet_modify.
             CATCH cx_sy_open_sql_db.
-           cl_demo_output=>display( 'ID != O' ).
+           cl_demo_output=>display( p_twit ).
             ENDTRY.
-*             Değiştirmek için update kullanıoyrduk.
             WHEN p_twitdg.
             UPDATE zot_28_t_twtr SET tweet = p_twit
              WHERE twid = p_id.

@@ -1,5 +1,7 @@
-CLASS zcl_ot_28_math_ops DEFINITION
- PUBLIC
+*Class'ın Definition ve implementation kısmı vardır. Definition kısmı metodlarımı tanımladığım yerdir.
+*
+CLASS zcl_ot_28_math_operations DEFINITION
+   PUBLIC
   FINAL
   CREATE PUBLIC .
 
@@ -17,7 +19,7 @@ ENDCLASS.
 
 
 
-  CLASS zcl_ot_28_math_ops IMPLEMENTATION.
+CLASS zcl_ot_28_math_operations IMPLEMENTATION.
   METHOD calculate_result.
 
     CASE iv_operation.

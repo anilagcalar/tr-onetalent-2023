@@ -23,14 +23,19 @@ REPORT zot_28_p_zmn.
 *AT SELECTION-SCREEN ON VALUE-REQUEST FOR P_char. “P_char için ekran içerisinde yardım ekranı çağırıldığında olan işlemler.
 *
 *START-OF-SELECTION.   islemlerin yapılmaya başlandığı noktadır.
-
-
-
+*
+*TYPES: BEGIN OF lty_table,
+*  year_diff TYPE char10,
+*  month_diff TYPE
+*  day_diff TYPE
+*  hour_diff TYPE
 DATA gs_zmn TYPE zot_28_t_zmn.
+SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
+
 
 SELECT-OPTIONS: s_id FOR gs_zmn-zamanid.
 
-START-OF-SELECTION.
+SELECTION-SCREEN END OF BLOCK b1.
 
   DATA: lv_ilktarih  TYPE dats,
         lv_sontarih  TYPE dats,
@@ -40,7 +45,13 @@ START-OF-SELECTION.
         lv_years     TYPE i,
         lv_months    TYPE i,
         lv_days      TYPE i,
-        lv_seconds   TYPE i.
+        lv_seconds   TYPE i,
+*        lt_table TYPE TABLE OF lty_table,
+*        ls_table TYPE lty_table.
+
+
+ START-OF-SELECTION.
+
 
 
 
@@ -121,3 +132,5 @@ START-OF-SELECTION.
 *WRITE : /001 days, dur_ti.
 *
 * CCU_TIMESTAMP_DIFFERENCE. fonk ne işe yarar
+
+*cl_demo_output=>display( lt_table ).

@@ -12,7 +12,7 @@
    <FUNCTIONS>
     <item>
      <FUNCNAME>TABLEFRAME_ZOT_28_MAINTENAN</FUNCNAME>
-     <SHORT_TEXT>Extended Table Maintenance: Upper Level</SHORT_TEXT>
+     <SHORT_TEXT>Genişletilmiş tablo bakımı: Üst düzey</SHORT_TEXT>
      <IMPORT>
       <RSIMP>
        <PARAMETER>VIEW_ACTION</PARAMETER>
@@ -106,7 +106,7 @@
     <item>
      <FUNCNAME>TABLEPROC_ZOT_28_MAINTENAN</FUNCNAME>
      <GLOBAL_FLAG>X</GLOBAL_FLAG>
-     <SHORT_TEXT>Lower-level extended table maintenance</SHORT_TEXT>
+     <SHORT_TEXT>Genişletilmiş tablo bakımı: Alt düzey</SHORT_TEXT>
      <IMPORT>
       <RSIMP>
        <PARAMETER>FCODE</PARAMETER>
@@ -530,7 +530,7 @@
       <PROGRAM>SAPLZOT_28_MAINTENAN</PROGRAM>
       <SCREEN>0002</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_28_T_ZMN</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_28_T_ZMN</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0002</NEXTSCREEN>
       <LINES>061</LINES>
@@ -633,13 +633,14 @@
        <CONT_NAME>TCTRL_ZOT_28_T_ZMN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_28_T_ZMN-ZAMANID</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>003</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -648,13 +649,14 @@
        <CONT_NAME>TCTRL_ZOT_28_T_ZMN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_28_T_ZMN-B_TARIH</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -663,13 +665,14 @@
        <CONT_NAME>TCTRL_ZOT_28_T_ZMN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_28_T_ZMN-B_SAAT</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>008</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -678,13 +681,14 @@
        <CONT_NAME>TCTRL_ZOT_28_T_ZMN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_28_T_ZMN-S_TARIH</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>004</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -693,13 +697,14 @@
        <CONT_NAME>TCTRL_ZOT_28_T_ZMN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_28_T_ZMN-S_SAAT</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>005</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>008</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -726,7 +731,7 @@
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>003</LENGTH>
-       <VISLENGTH>003</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <GROUP1>KEY</GROUP1>
        <FORMAT>CHAR</FORMAT>
@@ -761,7 +766,7 @@
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>008</LENGTH>
-       <VISLENGTH>008</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>TIMS</FORMAT>
        <FROM_DICT>X</FROM_DICT>
@@ -795,7 +800,7 @@
        <LINE>001</LINE>
        <COLUMN>005</COLUMN>
        <LENGTH>008</LENGTH>
-       <VISLENGTH>008</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>TIMS</FORMAT>
        <FROM_DICT>X</FROM_DICT>

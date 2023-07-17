@@ -23,12 +23,7 @@ REPORT zot_28_p_zmn.
 *AT SELECTION-SCREEN ON VALUE-REQUEST FOR P_char. “P_char için ekran içerisinde yardım ekranı çağırıldığında olan işlemler.
 *
 *START-OF-SELECTION.   islemlerin yapılmaya başlandığı noktadır.
-*
-*END-OF-SELECTION.       Son olarak yapılacak işlemler.
-*
-*TOP-OF-PAGE         Sayfanın en üst kısmına yazılacak olan text belirlenir.
-*
-*AT SELECTION-SCREEN INPUT :Verilerin kontrolünü sağlar.
+
 
 
 DATA gs_zmn TYPE zot_28_t_zmn.
@@ -113,3 +108,16 @@ START-OF-SELECTION.
     WRITE: | { lv_years } YIL, { lv_months } AY, { lv_days } GÜN |.
 
   ENDLOOP.
+*
+*  Sonra deneyeceğim kodlar
+*  DATA: seconds TYPE i VALUE 180001,
+*days TYPE i,
+*dur_ti LIKE sy-uzeit.
+*
+*days = seconds DIV 86400. "Seconds per day
+*seconds = seconds MOD 86400.
+*dur_ti = seconds.
+*
+*WRITE : /001 days, dur_ti.
+*
+* CCU_TIMESTAMP_DIFFERENCE. fonk ne işe yarar

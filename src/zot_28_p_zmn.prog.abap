@@ -31,16 +31,16 @@ REPORT zot_28_p_zmn.
 *AT SELECTION-SCREEN INPUT :Verilerin kontrolünü sağlar.
 
 
-Data gs_zmn TYPE zot_28_t_zmn.
+DATA gs_zmn TYPE zot_28_t_zmn.
 
 SELECT-OPTIONS: s_id FOR gs_zmn-zamanid.
 
-  START-OF-SELECTION.
+START-OF-SELECTION.
 
-  DATA: lv_ilktarih TYPE dats,
-        lv_sontarih TYPE dats,
-        lv_ilkzaman    TYPE tims,
-        lv_sonzaman    TYPE tims,
+  DATA: lv_ilktarih  TYPE dats,
+        lv_sontarih  TYPE dats,
+        lv_ilkzaman  TYPE tims,
+        lv_sonzaman  TYPE tims,
         lv_days_diff TYPE i,
         lv_years     TYPE i,
         lv_months    TYPE i,
@@ -53,7 +53,7 @@ SELECT-OPTIONS: s_id FOR gs_zmn-zamanid.
          b_saat,
          s_tarih,
          s_saat
-       FROM zot_28_t_zmn WHERE zamanid IN @s_id INTO TABLE @DATA(lt_zmnn).
+        FROM zot_28_t_zmn WHERE zamanid IN @s_id INTO TABLE @DATA(lt_zmnn).
 
 
   LOOP AT lt_zmnn INTO DATA(ls_date).
@@ -73,14 +73,14 @@ SELECT-OPTIONS: s_id FOR gs_zmn-zamanid.
     lv_days = lv_days_diff.
 
 
-        CALL FUNCTION 'SWI_DURATION_DETERMINE'
+    CALL FUNCTION 'SWI_DURATION_DETERMINE'
       EXPORTING
         baslangic_tarih = lv_ilktarih
-       bitis_tarihi   = lv_sontarih
+        bitis_tarihi    = lv_sontarih
         baslangic_saati = lv_ilkzaman
-       bitis_saati   = lv_sonzaman
+        bitis_saati     = lv_sonzaman
       IMPORTING
-        duration   = lv_seconds.
+        duration        = lv_seconds.
 
 
 
